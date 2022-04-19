@@ -14,7 +14,7 @@ t.corpusConstruction(path)
 #### 基于隐马尔可夫模型、n-gram算法、viterbi算法的无监督分词
 
 ```
-调用模型`participle.klm`，模型文件统一在`guwenNLP.modles`中
+调用模型`participle.klm`
 ```
 
 ```Python
@@ -35,7 +35,7 @@ print(result)
 #### 字典分词（词典使用“儒藏”（400MB文本文件）进行构建）
 
 ```
-调用模型`儒藏.pkl`，模型文件统一在`guwenNLP.modles`中
+调用模型`儒藏.pkl`
 ```
 
 ```Python
@@ -53,7 +53,7 @@ d.dic_paticiple("先帝创业未半而中道崩殂，今天下三分，益州疲
 
 ### 繁简转换
 
-转为繁体,调用模型`zh2hant.pkl`和分词模型`participle.klm`，模型文件统一在`guwenNLP.modles`中
+转为繁体,调用模型`zh2hant.pkl`和分词模型`participle.klm`
 
 ```Python
 from guwenNLP.zhConverter.zhConverter import zhConverter
@@ -64,9 +64,7 @@ z = zhConverter()
 z.zh2hant("先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。", "guwenNLP/modles/zh2hant.pkl", "guwenNLP/modles/participle.klm")
 ```
 
-
-
-转为简体,调用模型`zh2hans.pkl`和分词模型`participle.klm`，模型文件统一在`guwenNLP.modles`中
+转为简体,调用模型`zh2hans.pkl`和分词模型`participle.klm`
 
 ```Python
 from guwenNLP.zhConverter.zhConverter import zhConverter
@@ -76,3 +74,10 @@ from guwenNLP.zhConverter.zhConverter import zhConverter
 z = zhConverter()
 z.zh2hans("先帝創業未半而中道崩殂，今天下三分，益州疲弊，此誠危急存亡之秋也。", "guwenNLP/modles/zh2hans.pkl", "guwenNLP/modles/participle.klm")
 ```
+
+### 繁简转换
+
+模型文件太大，无法上传到github，百度云盘链接如下
+
+<mark>链接：https://pan.baidu.com/s/1A0slVr_HoCUJI3d-8edAQQ 
+提取码：yyyy</mark>
