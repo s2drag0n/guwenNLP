@@ -2,6 +2,8 @@
 
 ### 词库构建
 
+使用[Jiayan](https://github.com/jiaeyan/Jiayan)提供的词库构建功能实现：利用无监督的双[字典树](https://baike.baidu.com/item/Trie%E6%A0%91)、[点互信息](https://www.jianshu.com/p/79de56cbb2c7)以及左右邻接[熵](https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E7%86%B5/7302318?fr=aladdin)进行文言词库自动构建。
+
 ```Python
 from guwenNLP.thesaurusConstructor.thesaurusConstruction import thesaurusConstruction;\
 t = thesaurusConstruction();\
@@ -14,10 +16,6 @@ t.corpusConstruction(path)
 #### 基于隐马尔可夫模型、n-gram算法、viterbi算法的无监督分词
 
 调用模型`participle.klm`
-
-```
-
-```
 
 ```Python
 from guwenNLP.participler.participle import participle;\
@@ -69,9 +67,9 @@ z.zh2hans("先帝創業未半而中道崩殂，今天下三分，益州疲弊，
 
 ### 自动加标点&断句
 
-基于[GuwenBERT]([GitHub - Ethan-yt/guwenbert: GuwenBERT: 古文预训练语言模型（古文BERT） A Pre-trained Language Model for Classical Chinese (Literary Chinese)](https://github.com/Ethan-yt/guwenbert))预训练模型训练的`finalModel`进行自动加标点并断句，调用需配置torch和tensorflow并在GPU上进行使用。
+基于[GuwenBERT](https://github.com/Ethan-yt/guwenbert))预训练模型训练的`finalModel`进行自动加标点并断句，调用需配置torch和tensorflow并在GPU上进行使用。
 
-其中`Punc&Seg`目录下的`hpc_xjtu_train.py`是finalModel的训练脚本；`all_data_list.pkl`是训练使用语料，使用[杨钊师兄的文言文语料库]([GitHub - zhaoyang9425/modern-ancient_Chinese_dataset: a primary modern-ancient Chinese dataset](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset)[GitHub - zhaoyang9425/modern-ancient_Chinese_dataset: a primary modern-ancient Chinese dataset](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset))清洗处理得到，包含3809001条数据，其中数据处理代码为`data_process.py`；
+其中`Punc&Seg`目录下的`hpc_xjtu_train.py`是finalModel的训练脚本；`all_data_list.pkl`是训练使用语料，使用[杨钊师兄的文言文语料库](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset))清洗处理得到，包含3809001条数据，其中数据处理代码为`data_process.py`；
 
 `modle调用.ipynb`是在Google Colab平台调用`finalModel`给输入文本自动加标点的脚本，只需调用`punc(text1,text2)`函数即可（因为BERT模型要求至少两个输入，如果只有一段需要加标点的文本可直接将text2置为空字符串：`punc(text1,"")`）。
 
