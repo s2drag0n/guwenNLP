@@ -28,10 +28,6 @@ result = p.participle("先帝创业未半而中道崩殂，今天下三分，益
 print(result)
 ```
 
-```
-![](https://secure2.wostatic.cn/static/pR5ZUM4SzDdRZFwN8RkfEr/image.png)
-```
-
 #### 字典分词（词典使用“儒藏”（400MB文本文件）进行构建）
 
 ```
@@ -45,10 +41,6 @@ d.dic_paticiple("骨董自来多赝，而吴中尤甚，文士皆借以糊口。
 from guwenNLP.dic_participler.dic_participle import dic_participle 
 d = dic_participle()
 d.dic_paticiple("先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。", "guwenNLP/modles/儒藏.pkl")
-```
-
-```
-![](https://secure2.wostatic.cn/static/81SiesHUSbwJKJa8FLZ2Fg/image.png)
 ```
 
 ### 繁简转换
