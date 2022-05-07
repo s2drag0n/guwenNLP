@@ -2,7 +2,7 @@
 
 ### 词库构建
 
-使用[Jiayan](https://github.com/jiaeyan/Jiayan)提供的词库构建功能实现：利用无监督的双[字典树](https://baike.baidu.com/item/Trie%E6%A0%91)、[点互信息](https://www.jianshu.com/p/79de56cbb2c7)以及左右邻接[熵](https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E7%86%B5/7302318?fr=aladdin)进行文言词库自动构建。
+使用[Jiayan](https://github.com/jiaeyan/Jiayan)提供的词库构建功能实现：利用无监督的双字典树、点互信息以及左右邻接熵进行文言词库自动构建。
 
 ```Python
 from guwenNLP.thesaurusConstructor.thesaurusConstruction import thesaurusConstruction;\
