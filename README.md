@@ -13,8 +13,10 @@ t.corpusConstruction(path)
 
 #### 基于隐马尔可夫模型、n-gram算法、viterbi算法的无监督分词
 
-```
 调用模型`participle.klm`
+
+```
+
 ```
 
 ```Python
@@ -30,9 +32,7 @@ print(result)
 
 #### 字典分词（词典使用“儒藏”（400MB文本文件）进行构建）
 
-```
 调用模型`儒藏.pkl`
-```
 
 ```Python
 from guwenNLP.dic_participler.dic_participle import dic_participle 
