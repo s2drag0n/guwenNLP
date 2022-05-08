@@ -104,9 +104,7 @@ $$
   
   > 因为BERT模型要求至少两个输入，如果只有一段需要加标点的文本可直接将text2置为空字符串：`punc(text1,"")`）。
   
-  > 在Google Colab平台使用时，可将`finalModel`上传至云端硬盘并进行挂载。也可以在本地配置环境，只需稍微修改`modle调用.ipynb`文件即可。
-
-> 
+  > 在Google Colab平台使用时，可将`finalModel`上传至云端硬盘并进行挂载。也可以在本地配置环境（torch、transformers、sklearn），只需稍微修改`modle调用.ipynb`文件即可。
 
 ### 模型链接
 
