@@ -69,9 +69,38 @@ z.zh2hans("先帝創業未半而中道崩殂，今天下三分，益州疲弊，
 
 基于[GuwenBERT](https://github.com/Ethan-yt/guwenbert)预训练模型训练的`finalModel`进行自动加标点并断句，调用需配置torch和tensorflow并在GPU上进行使用。
 
-其中`Punc&Seg`目录下的`hpc_xjtu_train.py`是finalModel的训练脚本；`all_data_list.pkl`是训练使用语料，使用[杨钊师兄的文言文语料库](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset)清洗处理得到，包含3809001条数据（其中3428101条用于模型训练，380900条用于模型验证和评价），数据处理代码为`data_process.py`；
+其中`Punc&Seg`目录下的`hpc_xjtu_train.py`是finalModel的训练脚本，脚本输出为模型`finalModel`；
+
+`hpc_xjtu_validator.py`是`finalModel`的验证脚本，脚本输出为
+
+```
+TP(模型预测与原文中完全匹配的标点数量) 1013645
+FP(模型预测出来但原标注中没有标点的数量) 92116
+FN(原文中有但模型没有预测出来的标点数量) 135030
+precision(精确率) 0.9166944755693138
+recall(召回率) 0.8824471673885128
+F1 0.8992448665652962
+```
+
+    其中
+
+$$
+  precision=\frac{TP}{TP+FP}
+$$
+
+$$
+recall=\frac{TP}{TP+FN}
+$$
+
+$$
+F1=\frac{2*precision*recall}{precision+recall}
+$$
+
+`all_data_list.pkl`是训练使用语料，使用[杨钊师兄的文言文语料库](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset)清洗处理得到，包含3809001条数据（其中3428101条用于模型训练，380900条用于模型验证和评价），数据处理代码为`data_process.py`；
 
 `modle调用.ipynb`是在Google Colab平台调用`finalModel`给输入文本自动加标点的脚本，只需调用`punc(text1,text2)`函数即可（因为BERT模型要求至少两个输入，如果只有一段需要加标点的文本可直接将text2置为空字符串：`punc(text1,"")`）。
+
+
 
 ### 模型链接
 
