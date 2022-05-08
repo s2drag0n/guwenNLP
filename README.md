@@ -93,7 +93,7 @@ recall=\frac{TP}{TP+FN}
 $$
 
 $$
-F1=\frac{2*precision*recall}{precision+recall}
+F1=\frac{2 \times precision \times recall}{precision+recall}
 $$
 
 `all_data_list.pkl`是训练使用语料，使用[杨钊师兄的文言文语料库](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset)清洗处理得到，包含3809001条数据（其中3428101条用于模型训练，380900条用于模型验证和评价），数据处理代码为`data_process.py`；
