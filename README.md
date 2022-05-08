@@ -98,9 +98,11 @@ $$
 
 `all_data_list.pkl`是训练使用语料，使用[杨钊师兄的文言文语料库](https://github.com/zhaoyang9425/modern-ancient_Chinese_dataset)清洗处理得到，包含3809001条数据（其中3428101条用于模型训练，380900条用于模型验证和评价），数据处理代码为`data_process.py`；
 
-`modle调用.ipynb`是在Google Colab平台调用`finalModel`给输入文本自动加标点的脚本，只需调用`punc(text1,text2)`函数即可（因为BERT模型要求至少两个输入，如果只有一段需要加标点的文本可直接将text2置为空字符串：`punc(text1,"")`）。
+`modle调用.ipynb`是在Google Colab平台调用`finalModel`给输入文本自动加标点的脚本，只需调用`punc(text1,text2)`函数即可
 
+> 因为BERT模型要求至少两个输入，如果只有一段需要加标点的文本可直接将text2置为空字符串：`punc(text1,"")`）。
 
+> 在Google Colab平台使用时，可将`finalModel`上传至云端硬盘并进行挂载。也可以在本地配置环境，只需稍微修改`modle调用.ipynb`文件即可。
 
 ### 模型链接
 
