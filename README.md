@@ -1,4 +1,4 @@
-# guwenNLP
+# guwenNLP 本科毕业设计
 
 ### 词库构建
 
